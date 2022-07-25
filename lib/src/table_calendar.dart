@@ -709,7 +709,7 @@ class _TableCalendarState<T> extends State<TableCalendar<T>> {
     final middleDay = date.add(const Duration(days: 3));
     final dayOfYear = _dayOfYear(middleDay);
 
-    return 5;
+    return 7;
   }
 
   int _dayOfYear(DateTime date) {
