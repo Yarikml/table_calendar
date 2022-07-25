@@ -714,7 +714,7 @@ class _TableCalendarState<T> extends State<TableCalendar<T>> {
 
   int _dayOfYear(DateTime date) {
     return normalizeDate(date)
-            .difference(DateTime.utc(date.year, 1, 1))
+            .difference(DateTime.utc(date.moth < 9 date.year -1 : date.year, 09, 01))
             .inDays +
         1;
   }
