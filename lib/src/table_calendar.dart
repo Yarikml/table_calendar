@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import 'dart:math';
+import 'dart:developer' as dev;
 
 import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart';
@@ -708,7 +709,7 @@ class _TableCalendarState<T> extends State<TableCalendar<T>> {
   int _calculateWeekNumber(DateTime date) {
     final middleDay = date.add(const Duration(days: 3));
     final dayOfYear = _dayOfYear(middleDay);
-
+    dev.log(dayOfYear.toString());
     return 1 + ((dayOfYear - 1) / 7).floor();
   }
 
